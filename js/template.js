@@ -26,7 +26,7 @@
 
 (function () {
     'use strict';
-    
+
     // Mobile
     var isMobile = {
         Android: function () {
@@ -48,25 +48,25 @@
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
         }
     };
-    
+
     // Preloader 
-    $(window).load(function() {
-    $('.preloader').fadeOut("slow");
+    $(window).load(function () {
+        $('.preloader').fadeOut("slow");
     });
-    
+
     var wind = $(window);
-    
+
     // ScrollIt
     $.scrollIt({
-      upKey: 38,                // key code to navigate to the next section
-      downKey: 40,              // key code to navigate to the previous section
-      easing: 'swing',          // the easing function for animation
-      scrollTime: 600,          // how long (in ms) the animation takes
-      activeClass: 'active',    // class given to the active nav element
-      onPageChange: null,       // function(pageIndex) that is called when page is changed
-      topOffset: -70            // offste (in px) for fixed top navigation
+        upKey: 38,                // key code to navigate to the next section
+        downKey: 40,              // key code to navigate to the previous section
+        easing: 'swing',          // the easing function for animation
+        scrollTime: 600,          // how long (in ms) the animation takes
+        activeClass: 'active',    // class given to the active nav element
+        onPageChange: null,       // function(pageIndex) that is called when page is changed
+        topOffset: -70            // offste (in px) for fixed top navigation
     });
-    
+
     // Full Height
     var fullHeight = function () {
         if (!isMobile.any()) {
@@ -76,7 +76,7 @@
             });
         }
     };
-    
+
     // Animations
     var contentWayPoint = function () {
         var i = 0;
@@ -110,41 +110,41 @@
             offset: '85%'
         });
     };
-    
+
     // Navbar scrolling background
-    wind.on("scroll",function () {
+    wind.on("scroll", function () {
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
             logo = $(".navbar .logo> img");
-        if(bodyScroll > 100){
+        if (bodyScroll > 100) {
             navbar.addClass("nav-scroll");
             logo.attr('src', 'images/logo-dark.png');
-        }else{
+        } else {
             navbar.removeClass("nav-scroll");
             logo.attr('src', 'images/logo-light.png');
         }
     });
-    
+
     // Close navbar-collapse when a  clicked
     $(".navbar-nav .dropdown-item a").on('click', function () {
         $(".navbar-collapse").removeClass("show");
     });
-    
+
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
-    pageSection.each(function(indx){
-        if ($(this).attr("data-background")){
+    pageSection.each(function (indx) {
+        if ($(this).attr("data-background")) {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
-    
+
     $(function () {
         contentWayPoint();
     });
-    
+
     // YouTubePopUp
     $("a.vid").YouTubePopUp();
-    
+
     // Story owlCarousel
     $('.story .owl-carousel').owlCarousel({
         loop: true
@@ -159,7 +159,8 @@
         , responsive: {
             0: {
                 items: 1
-            , }
+                ,
+            }
             , 600: {
                 items: 1
             }
@@ -168,7 +169,7 @@
             }
         }
     });
-    
+
     // Events owlCarousel
     $('.events .owl-carousel').owlCarousel({
         loop: true
@@ -183,7 +184,8 @@
         , responsive: {
             0: {
                 items: 1
-            , }
+                ,
+            }
             , 600: {
                 items: 1
             }
@@ -192,7 +194,7 @@
             }
         }
     });
-    
+
     // Bridesmaid owlCarousel
     $('.bridesmaid .owl-carousel').owlCarousel({
         loop: true
@@ -214,7 +216,7 @@
             }
         }
     });
-    
+
     // Groomsmen owlCarousel
     $('.groomsmen .owl-carousel').owlCarousel({
         loop: true
@@ -236,7 +238,7 @@
             }
         }
     });
-    
+
     // Gift Registry owlCarousel
     $('.gift-registry .owl-carousel').owlCarousel({
         loop: true
@@ -258,7 +260,7 @@
             }
         }
     });
-    
+
     // Slider
     var sliderMain = function () {
         $('.flexslider').flexslider({
@@ -280,52 +282,52 @@
             }
         });
     };
-    
+
     // Gallery 
     $(window).on("load", function () {
-    var e = $(".gallery-filter")
-        , a = $("#gallery-filter");
-    e.isotope({
-        filter: "*"
-        , layoutMode: "masonry"
-        , animationOptions: {
-            duration: 750
-            , easing: "linear"
-        }
-    }), a.find("a").on("click", function () {
-        var o = $(this).attr("data-filter");
-        return a.find("a").removeClass("active"), $(this).addClass("active"), e.isotope({
-            filter: o
+        var e = $(".gallery-filter")
+            , a = $("#gallery-filter");
+        e.isotope({
+            filter: "*"
+            , layoutMode: "masonry"
             , animationOptions: {
-                animationDuration: 750
+                duration: 750
                 , easing: "linear"
-                , queue: !1
             }
-        }), !1
-    })
-});
-    
+        }), a.find("a").on("click", function () {
+            var o = $(this).attr("data-filter");
+            return a.find("a").removeClass("active"), $(this).addClass("active"), e.isotope({
+                filter: o
+                , animationOptions: {
+                    animationDuration: 750
+                    , easing: "linear"
+                    , queue: !1
+                }
+            }), !1
+        })
+    });
+
     // Magnific Popup
     $(".img-zoom").magnificPopup({
-    type: "image"
-    , closeOnContentClick: !0
-    , mainClass: "mfp-fade"
-    , gallery: {
-        enabled: !0
-        , navigateByImgClick: !0
-        , preload: [0, 1]
-    }
-});
-    
+        type: "image"
+        , closeOnContentClick: !0
+        , mainClass: "mfp-fade"
+        , gallery: {
+            enabled: !0
+            , navigateByImgClick: !0
+            , preload: [0, 1]
+        }
+    });
+
     // Document on load.
     $(function () {
         fullHeight();
         contentWayPoint();
         sliderMain();
     });
-    
+
     // Progress-wrap
-     var progressPath = document.querySelector('.progress-wrap path');
+    var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();
     progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
     progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -354,7 +356,7 @@
         jQuery('html, body').animate({ scrollTop: 0 }, duration);
         return false;
     })
-    
+
     // RSVP FORM 
     var form = $('.contact__form'),
         message = $('.contact__msg'),
@@ -382,11 +384,11 @@
             url: form.attr('action'),
             data: form_data
         })
-        .done(done_func)
-        .fail(fail_func);
+            .done(done_func)
+            .fail(fail_func);
     });
-    
-    
+
+
 }());
 
 //Audio
@@ -394,35 +396,35 @@
 
 
 // Countdown wedding
-  (function () {
-  const second = 1000,
+(function () {
+    const second = 1000,
         minute = second * 60,
         hour = minute * 60,
         day = hour * 24;
-  let birthday = "Sep 6, 2025 00:00:00",
-      countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {    
-        let now = new Date().getTime(),
-            distance = countDown - now;
+    let birthday = "Sep 6, 2025 00:00:00",
+        countDown = new Date(birthday).getTime(),
+        x = setInterval(function () {
+            let now = new Date().getTime(),
+                distance = countDown - now;
 
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
 
-        //do something later when date is reached
-        if (distance < 0) {
-          let headline = document.getElementById("headline"),
-              countdown = document.getElementById("countdown"),
-              content = document.getElementById("content");
+            //do something later when date is reached
+            if (distance < 0) {
+                let headline = document.getElementById("headline"),
+                    countdown = document.getElementById("countdown"),
+                    content = document.getElementById("content");
 
-          headline.innerText = "It's our wedding!";
-          countdown.style.display = "none";
-          content.style.display = "block";
+                headline.innerText = "It's our wedding!";
+                countdown.style.display = "none";
+                content.style.display = "block";
 
-          clearInterval(x);
-        }
-        //seconds
-      }, 0)
-  }());
-    
+                clearInterval(x);
+            }
+            //seconds
+        }, 0)
+}());
+
