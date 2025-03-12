@@ -1,0 +1,554 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vale & Cesar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/YouTubePopUp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .gift-card {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .gift-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* Ensures content is evenly distributed */
+            height: 100%;
+            /* Make all cards the same height */
+        }
+
+        .gift-card button {
+            background-color: #a99260;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            right: 0;
+            /* Change this */
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            /* Ensure it's hidden initially */
+            justify-content: flex-end;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+            /* Smooth transition */
+        }
+
+
+
+
+        .overlay-content {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 685px;
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 40px;
+        }
+
+        /*         .overlay-content iframe {
+                height: 825px;
+                width: 640px;
+            } */
+
+        .close-btn {
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #333;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+
+
+        @media (max-width: 600px) {
+            .overlay-content {
+                width: 100%;
+                height: 100%;
+                padding: 40px;
+            }
+
+            .overlay-content iframe {
+                height: calc(100% - 30px);
+                width: 100%;
+            }
+
+            .close-btn {
+                font-size: 1.5rem;
+            }
+
+        }
+
+        .gift-card img {
+            width: 100%;
+            height: 350px;
+            /* Set a fixed height to make images uniform */
+            object-fit: cover;
+            /* Ensures consistent image proportions */
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #iframe-container {
+            width: 100%;
+            height: 80vh;
+            /* Make it take 80% of the screen height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #message-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 600px) {
+            .overlay-content {
+                width: 100%;
+                /* Use full width */
+                height: 100vh;
+                /* Full height */
+                padding: 10px;
+                /* Reduce padding for more space */
+                border-radius: 0;
+                /* Remove rounded corners */
+            }
+
+            #iframe-container {
+                width: 100%;
+                height: 90vh;
+                /* Increase height */
+            }
+
+            #message-iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-heart">
+            <div></div>
+        </div>
+    </div>
+    <!-- Progress-wrapp scroll-button -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper navbar-brand valign">
+                <div class="logo">
+                    <!-- <img src="images/logo-light.png" class="logo-img" alt=""> -->
+                    <a href="index.html">
+                        <h2>Vale &amp; Cesar</h2>
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="icon-bar"><i class="ti-line-double"></i></span> </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#story">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#whenwhere">Cuándo y Dónde?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#outfit">Vestimenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#rsvp">Reserva</a></li>
+                    <li class="nav-item"><a class="nav-link" href="regalos.html">Regalos</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Banner -->
+    <div class="banner-header valign bg-img bg-fixed" data-overlay-dark="2" data-background="images3/foto_portada.jpg"
+        style="background-position: 50%">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center caption">
+                    <h1 class="animate-box" data-animate-effect="fadeInUp">Regalos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- Content -->
+    <div class="container">
+        <p><b>Gracias por tu compañía en nuestra nueva etapa, si quieres tener un detalle con nosotros, suma
+                experiencias a
+                nuestra Luna de Miel</b>
+            <br><br>
+
+            Paso 1: Escoge un regalo <br>
+            Paso 2: Hacé click en obsequiar <br>
+            Paso 3: Se desplegará la información para la selección del obsequio y una ventana para que puedas dejarle un
+            mensaje a los novios. <br>
+            Paso 4: Desde tu Sucursal Bancaria, puedes realizar la transferencia con el costo y código del obsequio a la
+            cuenta: <br><br>
+
+        <h6 class="section-subtitle">Depósito SINPE Móvil</h6>
+        <p>8493-7845 a nombre de Valeria Martinez</p>
+        <p>8310-0173 a nombre de Cesar Chaves</p><br>
+        <h6 class="section-subtitle">Cuenta BAC Colones</h6>
+        Cliente: VALERIA CRISTINA MARTINEZ RIVERA <br>
+        Número de cuenta BAC: 965011224<br>
+        Número de cuenta IBAN: CR76010200009650112248
+        <p><br>
+        </p>
+        <h1>Detalles del Día</h3>
+            <div class="row">
+                <!-- Aquí se repetirán los items de regalo -->
+                <div class="col-md-6">
+                    <div class="gift-card">
+                        <img src="https://i.ibb.co/zkdJndb/cafe.png" alt="cafe" border="0">
+                        <br><br>
+                        <p style="font-size: 40px;">14,95€ por persona</p>
+                        <p><b>Experiencia: </b>Café en Himare
+                        </p>
+                        <p><b>Código: </b>CHH01</p>
+                        <button class="obsequiar-btn">Obsequiar</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gift-card">
+                        <img src="https://i.ibb.co/0j01p7LF/2.png" alt="cafe" border="0">
+                        <p style="font-size: 40px;">19,95€ por persona</p>
+                        <p><b>Experiencia: </b>Drinks en Himare
+                        </p>
+                        <p><b>Código: </b>DHC01</p>
+                        <button class="obsequiar-btn">Obsequiar</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gift-card">
+                        <img src="https://i.ibb.co/qFF05TGg/3.png" alt="3" border="0">
+                        <p style="font-size: 40px;">24,95€ por persona</p>
+                        <p><b>Experiencia: </b>Excursión Blue Eye
+                        </p>
+                        <p><b>Código: </b>EXB01</p>
+                        <button class="obsequiar-btn">Obsequiar</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gift-card">
+                        <img src="https://i.ibb.co/fYmnFGfH/4.png" alt="4" border="0">
+                        <p style="font-size: 40px;">24,95€ por persona</p>
+                        <p><b>Experiencia: </b>Excursión Gjirokaster:
+                        </p>
+                        <p><b>Código: </b>EXG01</p>
+                        <button class="obsequiar-btn">Obsequiar</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="gift-card">
+                        <img src="https://i.ibb.co/sdzhcB7t/5.png" alt="5" border="0">
+                        <p style="font-size: 40px;">24,95€ por persona</p>
+                        <p><b>Experiencia: </b>Excursión Berat
+                        </p>
+                        <p><b>Código: </b>EXB01</p>
+                        <button class="obsequiar-btn">Obsequiar</button>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <h1>Momentos para compartir</h3>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/h1xwZsB8/6.png" alt="6" border="0"> <br><br>
+                            <p style="font-size: 40px;">29,95€ por persona</p>
+                            <p><b>Experiencia: </b>Cena en Ksamil
+                            </p>
+                            <p><b>Código: </b>DIK01</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/mCXJx8zY/7.png" alt="7" border="0">
+                            <p style="font-size: 40px;">29,95€ por persona</p>
+                            <p><b>Experiencia: </b>Cena en Dhërmi
+                            </p>
+                            <p><b>Código: </b>DID01</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/ccQzj7fM/Imagen17.png" alt="Imagen17" border="0">
+                            <p style="font-size: 40px;">29,95€ por persona</p>
+                            <p><b>Experiencia: </b>Cena en Lost Sea Side
+                            </p>
+                            <p><b>Código: </b>DLS01</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/Mx44mXwH/8.png" alt="8" border="0">
+                            <p style="font-size: 40px;">39,95€ por persona</p>
+                            <p><b>Experiencia: </b>Bote Grama Bay
+                            </p>
+                            <p><b>Código: </b>GBB01</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/qYTf6zFg/9.png" alt="9" border="0">
+                            <p style="font-size: 40px;">39,95€ por persona</p>
+                            <p><b>Experiencia: </b>Cena en Dubrovnik
+                            </p>
+                            <p><b>Código: </b>DID02</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="gift-card">
+                            <img src="https://i.ibb.co/gFZJhHTs/image.png" alt="image" border="0">
+                            <p style="font-size: 40px;">39,95€ por persona</p>
+                            <p><b>Experiencia: </b>Cena en Hvar
+                            </p>
+                            <p><b>Código: </b>DIH01</p>
+                            <button class="obsequiar-btn">Obsequiar</button>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <h1>Experiencias de Ensueño</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="gift-card">
+                                <img src="https://i.ibb.co/Lj2kP5b/11.png" alt="11" border="0">
+                                <p style="font-size: 40px;">49,95€ por persona</p>
+                                <p><b>Experiencia: </b>Noche de hospedaje en Hvar
+                                </p>
+                                <p><b>Código: </b>NIH01</p>
+                                <button class="obsequiar-btn">Obsequiar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gift-card">
+                                <img src="https://i.ibb.co/TDyCNTjH/12.png" alt="12" border="0">
+                                <p style="font-size: 40px;">49,95€ por persona</p>
+                                <p><b>Experiencia: </b>Noche de hospedaje en Dubrovnik
+                                </p>
+                                <p><b>Código: </b>NID01</p>
+                                <button class="obsequiar-btn">Obsequiar</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="gift-card">
+                                <img src="https://i.ibb.co/SX2nDV8x/13.png" alt="13" border="0">
+                                <p style="font-size: 40px;">59,95€ por persona</p>
+                                <p><b>Experiencia: </b>Crucero Alpes Albania
+                                </p>
+                                <p><b>Código: </b>ALC01</p>
+                                <button class="obsequiar-btn">Obsequiar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <h1>Contribución Especial</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="gift-card">
+                                    <img src="https://i.ibb.co/LD1cRNyw/14.png" alt="14" border="0">
+                                    <p style="font-size: 40px;">99,95€ por persona</p>
+                                    <p><b>Experiencia: </b>Contribución para Vuelos
+                                    </p>
+                                    <p><b>Código: </b>FLY01</p>
+                                    <button class="obsequiar-btn">Obsequiar</button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="gift-card">
+                                    <img src="https://i.ibb.co/HLBpw9zm/15.png" alt="15" border="0">
+                                    <p style="font-size: 40px;">99,95€ por persona</p>
+                                    <p><b>Experiencia: </b>Contribución para alquiler del carro
+                                    </p>
+                                    <p><b>Código: </b>CAR01</p>
+                                    <button class="obsequiar-btn">Obsequiar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <!-- Overlay -->
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <h2>¡Gracias!</h2>
+                                <p>Desde tu Sucursal Bancaria, puedes realizar la transferencia con el costo y código
+                                    del obsequio a la cuenta:</p>
+                                <p>
+                                <h6 class="section-subtitle">Depósito SINPE Móvil</h6>
+                                <p>8493-7845 a nombre de Valeria Martinez</p>
+                                <p>8310-0173 a nombre de Cesar Chaves</p><br>
+                                <h6 class="section-subtitle">Cuenta BAC Colones</h6>
+                                Cliente: VALERIA CRISTINA MARTINEZ RIVERA <br>
+                                Número de cuenta BAC: 965011224<br>
+                                Número de cuenta IBAN: CR76010200009650112248
+                                <p><br>
+                                </p>
+                                </p>
+
+                                <div class="button-container">
+                                    <button id="show-iframe-btn">Déjanos un mensaje!</button>
+                                </div>
+
+                                <!-- Hidden iframe (initially not displayed) -->
+                                <div id="iframe-container" style="display: none; margin-top: 20px;">
+                                    <iframe id="message-iframe" src="" width="100%" height="800px"
+                                        style="border: none;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <br><br>
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {
+                                const overlay = document.querySelector('.overlay');
+                                const obsequiarButtons = document.querySelectorAll('.obsequiar-btn');
+                                const overlayContent = document.querySelector('.overlay-content');
+                                const showIframeButton = document.getElementById('show-iframe-btn');
+                                const iframeContainer = document.getElementById('iframe-container');
+                                const messageIframe = document.getElementById('message-iframe');
+
+                                // Show the overlay when clicking "Obsequiar"
+                                obsequiarButtons.forEach(button => {
+                                    button.addEventListener('click', () => {
+                                        overlay.style.display = 'flex';
+                                    });
+                                });
+
+                                // Hide overlay when clicking outside the content
+                                overlay.addEventListener('click', (event) => {
+                                    if (!overlayContent.contains(event.target)) {
+                                        overlay.style.display = 'none';
+                                        iframeContainer.style.display = 'none'; // Hide iframe when closing
+                                    }
+                                });
+
+                                // Show the iframe inside the overlay when clicking the button
+                                showIframeButton.addEventListener('click', () => {
+                                    messageIframe.src = "https://form.jotform.com/250705731304044"; // Set the URL
+                                    iframeContainer.style.display = 'block'; // Show the iframe
+                                });
+                            });
+                        </script>
+
+
+
+                        <!-- Footer section -->
+                        <footer id="footer">
+                            <div class="container">
+                                <div class="top-footer">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <div class="section-padding">
+                                                <h2><span>Vale <small>&amp;</small> Cesar</span></h2>
+
+                                                <br>
+                                                <br>
+
+                                                <h6>Diseñado por <a href="https://www.japweddings.com"><u>JAP
+                                                            Weddings</u> <img src="images/VECTOR.svg" alt=""
+                                                            style="width: 10%;"></a></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-footer">
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <p>Nos gustaría que nos acompañes en este día tan especial</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                        <!-- jQuery -->
+                        <script src="js/jquery.min.js"></script>
+                        <script src="js/modernizr-2.6.2.min.js"></script>
+                        <script src="js/jquery.easing.1.3.js"></script>
+                        <script src="js/bootstrap.min.js"></script>
+                        <script src="js/jquery.waypoints.min.js"></script>
+                        <script src="js/jquery.flexslider-min.js"></script>
+                        <script src="js/sticky-kit.min.js"></script>
+                        <script src="js/scrollIt.min.js"></script>
+                        <script src="js/owl.carousel.min.js"></script>
+                        <script src="js/isotope.js"></script>
+                        <script src="js/jquery.magnific-popup.min.js"></script>
+                        <script src="js/YouTubePopUp.js"></script>
+                        <script src="js/template.js"></script>
+</body>
+
+</html>
