@@ -2780,3 +2780,24 @@ button.prev:hover, button.next:hover {
     color: #666;
     font-weight: 400;
 }
+
+.wedding-button {
+    background-color: #b08c3e; /* Color marrón para un estilo elegante */
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.wedding-button:hover {
+    background-color: #A0522D; /* Color marrón más claro al pasar el ratón */
+}
+
+.wedding-button:active {
+    background-color: #654321; /* Color marrón más oscuro al hacer clic */
+}

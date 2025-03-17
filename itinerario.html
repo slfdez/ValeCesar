@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vale & Cesar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/YouTubePopUp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        .activity {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .activity img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .activity .details {
+            padding: 20px;
+        }
+
+        .activity h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #555;
+        }
+
+        .activity p {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .activity .date {
+            font-weight: bold;
+            color: #b08c3e;
+        }
+
+        .activity .location {
+            font-style: italic;
+        }
+
+        button {
+            display: block;
+            margin: 40px auto;
+            padding: 10px 20px;
+            background-color: #b08c3e;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #b08c3e;
+        }
+
+        /* Estilos para computadoras */
+        .desktop-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .desktop-gallery img {
+            width: 30%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mostrar la galería en computadoras y ocultar el carrusel */
+        @media (min-width: 768px) {
+            .desktop-gallery {
+                display: flex;
+            }
+
+            .mobile-carousel {
+                display: none ;
+                
+            }
+            .owl-carousel {
+                display: none ;
+            }
+
+            .owl-theme{
+                display: none ;
+            }
+            .owl-loaded{
+                display: none ;
+            }
+            .owl-drag{
+                display: none ;
+            }
+            .owl-item{
+                display: none ;
+            }
+        }
+
+        /* Mostrar el carrusel en móviles y ocultar la galería */
+        @media (max-width: 767px) {
+            .desktop-gallery {
+                display: none;
+            }
+
+            .mobile-carousel {
+                display: block;
+            }
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-heart">
+            <div></div>
+        </div>
+    </div>
+    <!-- Progress-wrapp scroll-button -->
+    <div class="progress-wrap">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-wrapper navbar-brand valign">
+                <div class="logo">
+                    <!-- <img src="images/logo-light.png" class="logo-img" alt=""> -->
+                    <a href="index.html">
+                        <h2>Vale &amp; Cesar</h2>
+                    </a>
+                </div>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="icon-bar"><i class="ti-line-double"></i></span> </button>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#story">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#gallery">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#whenwhere">Cuándo y Dónde?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#outfit">Vestimenta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#rsvp">Reserva</a></li>
+                    <li class="nav-item"><a class="nav-link" href="regalos.html">Regalos</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header Banner -->
+    <div class="banner-header valign bg-img bg-fixed" data-overlay-dark="2" data-background="images3/foto_portada.jpg"
+        style="background-position: 50%;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center caption">
+                    <h1 class="animate-box" data-animate-effect="fadeInUp">Itinerario</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h1>Itinerario e Información Adicional para la Boda en Hungría</h1>
+
+
+    <div style="padding: 20px;">
+
+        <!-- Actividad 1: Llegada a Budapest -->
+        <div class="activity">
+            <img src="https://i.ibb.co/fdghmKVh/Imagen1.png" alt="Llegada a Budapest">
+            <div class="details">
+                <h2>Llegada a Budapest</h2>
+                <p class="date">2 de Septiembre 2025</p>
+                <p class="location">Budapest, Hungría</p>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Paseo por el Río Danubio -->
+        <div class="activity">
+            <img src="https://i.ibb.co/NnSc14QR/Imagen2.png" alt="Paseo por el Río Danubio">
+            <div class="details">
+                <h2>Paseo por el Río Danubio</h2>
+                <p class="date">4 de Septiembre 2025</p>
+                <p class="location">Río Danubio, Budapest</p>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Ceremonia Católica -->
+        <div class="activity">
+            <img src="https://i.ibb.co/3mB0pFP1/Imagen3.png" alt="Ceremonia Católica">
+            <div class="details">
+                <h2>Ceremonia Católica</h2>
+                <p class="date">6 de Septiembre 2025 - 3:00 pm</p>
+                <p class="location">Felsővízivárosi Szent Anna templom</p>
+            </div>
+        </div>
+
+        <!-- Actividad 4: Sesión Fotográfica -->
+        <div class="activity">
+            <img src="https://i.ibb.co/SXN5vknW/Imagen4.png" alt="Sesión Fotográfica">
+            <div class="details">
+                <h2>Sesión Fotográfica</h2>
+                <p class="date">6 de Septiembre 2025 - 4:00 pm</p>
+            </div>
+        </div>
+
+        <!-- Actividad 5: Cena en el Danubio -->
+        <div class="activity">
+            <img src="https://i.ibb.co/tPqVRW9Y/Imagen5.png" alt="Cena en el Danubio">
+            <div class="details">
+                <h2>Cena en el Danubio</h2>
+                <p class="date">6 de Septiembre 2025 - 6:00 pm</p>
+                <p class="location">Río Danubio, Budapest</p>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <div id="slideshow">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-title">Posibles itinerarios</h2>
+                </div>
+            </div>
+
+            <!-- Contenedor para computadoras -->
+            <div class="desktop-gallery">
+                <img src="Slideshow/1.jpg" alt="Image 1">
+                <img src="Slideshow/2.jpg" alt="Image 2">
+                <img src="Slideshow/3.jpg" alt="Image 3">
+            </div>
+
+            <!-- Carrusel solo en móviles -->
+            <div class="mobile-carousel owl-carousel owl-theme">
+                <div class="item"><img src="Slideshow/1.jpg" alt="Image 1"></div>
+                <div class="item"><img src="Slideshow/2.jpg" alt="Image 2"></div>
+                <div class="item"><img src="Slideshow/3.jpg" alt="Image 3"></div>
+            </div>
+        </div>
+
+        <br><br>
+        <div class="button-container">
+            <button class="prev">Previo</button>
+            <button class="next">Siguiente</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var isMobile = window.innerWidth < 768; // Detecta si es móvil
+
+            if (isMobile) {
+                $('.mobile-carousel').owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                });
+
+                $('.next').click(function () {
+                    $('.mobile-carousel').trigger('next.owl.carousel');
+                });
+
+                $('.prev').click(function () {
+                    $('.mobile-carousel').trigger('prev.owl.carousel', [300]);
+                });
+            }
+        });
+
+    </script>
+
+
+
+
+    <!-- Footer section -->
+    <footer id="footer">
+        <div class="container">
+            <div class="top-footer">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="section-padding">
+                            <h2><span>Vale <small>&amp;</small> Cesar</span></h2>
+
+                            <br>
+                            <br>
+
+                            <h6>Diseñado por <a href="https://www.japweddings.com"><u>JAP
+                                        Weddings</u> <img src="images/VECTOR.svg" alt="" style="width: 10%;"></a></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Nos gustaría que nos acompañes en este día tan especial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/sticky-kit.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/YouTubePopUp.js"></script>
+    <script src="js/template.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                loop: false, // Evita la repetición en escritorio
+                margin: 10,
+                nav: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        loop: true // Solo permitir el loop en móviles
+                    },
+                    600: {
+                        items: 3,
+                        loop: false
+                    },
+                    1000: {
+                        items: 5,
+                        loop: false
+                    }
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var isMobile = window.innerWidth < 768; // Detecta si es móvil
+
+            if (isMobile) {
+                $('.mobile-carousel').owlCarousel({
+                    items: 1,
+                    loop: true,
+                    margin: 10,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                    autoplayHoverPause: true
+                });
+
+                $('.next').click(function () {
+                    $('.mobile-carousel').trigger('next.owl.carousel');
+                });
+
+                $('.prev').click(function () {
+                    $('.mobile-carousel').trigger('prev.owl.carousel', [300]);
+                });
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
